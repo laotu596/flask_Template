@@ -1,0 +1,16 @@
+路由
+1、动态路由(url传参)
+
+@app.route('/<name>')         #设置url传参数http://127.0.0.1:5000/lishurong
+def first_flask(name):        # 视图必须有对应接受参数
+    print(name)
+    return 'Hello World'
+
+2、接受整形数字参数
+
+@app.route('/<int:age>/')       #设置url参数 http://127.0.0.1:5000/18/
+def first_flask(age):           # 视图必须有对应接受参数
+    print(age)
+    return 'Hello World'
+
+3、接受浮点型数字参数等
