@@ -1,0 +1,20 @@
+#404错误页面 404.html
+
+{% extends 'base.html'%}                              #模板继承,使用基础模板
+{% block title %}404 - Page Not Found{% endblock %}   #title块,表示页面标题
+{% block content %}                                   #content块  表示页面主体内容
+<h1>Page Not Found</h1>
+<p>You are lost...</p>
+{% endblock %}
+
+
+
+
+#505错误页面 505.html
+
+{% extends 'base.html' %}
+{% block title %}500 - Internal Server Error{% endblock %}
+{% block content %}
+<h1>Internal Server Error</h1>
+<p>Something was wrong...</p>
+{% endblock %}

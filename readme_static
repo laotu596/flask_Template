@@ -1,0 +1,16 @@
+静态文件
+要引用静态文件，就要给它生成一个url地址 使用url_for 函数
+
+url_for() 可以使用程序url映射中保存的信息生成URL 它最简单的用法就是以视图函数名作为参数 返回对用的url
+
+如下
+@app.route('/')
+def index():
+    return '<h1>Hello World!</h1>'
+
+在模板目录下面的基模板给程序增加一个小图标
+{% block head %}
+{{ super() }}                                                          #使用super()获取（bootstrap/base.html的内容）
+<link rel="icon" href="{{ url_for('static',filename='icon.jpg') }}"    #url_for()函数有两个参数，第一个参数是'static',第二参数就是给/static/里的filename参数传入值
+      type="image/x-icon">                                             #这里的url_for()函数返回的地址就是'/static/icon.jpg'
+{% endblock %}
