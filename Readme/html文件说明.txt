@@ -1,0 +1,6 @@
+1、base.html   没有使用bootstrap 前端架构 采用
+2、index.html  继承了base.html 模板
+
+-----------------------------------------------------------
+
+1、base-1.html   使用了bootstrap 前端架构
